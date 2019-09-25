@@ -1,0 +1,308 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/* Navigation Styles */
+
+
+header, nav{
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+  
+}
+
+header nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 60px;
+}
+
+
+
+header nav ul li a{
+    display: block;
+    padding: 0 2rem;
+    font-size: 1.4rem;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+
+
+
+header nav ul li a:hover{
+    text-decoration: none;
+    color: hsla(189, 100%, 52%, 1);
+    transition: .7s ease-in-out;
+    transform: translateY(5px);
+}
+
+/* Hamburger-Menu-Styles */
+
+.menu{
+    position: absolute;
+    right: 20px;
+    padding: 2rem;
+    display: none;
+    cursor: pointer;
+}
+.menu .bar,
+.menu .bar::before,
+.menu .bar::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 2rem;
+    background-color: white;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    transition: 650ms;
+    }
+
+.menu .bar::before{
+    top: -1rem;
+}
+
+.menu .bar::after{
+    top: 1rem;
+}
+
+.active .bar{
+    background: transparent;
+}
+
+.active .bar::before{
+    transform: rotate(-45deg);
+}
+
+.active .bar::after{
+    transform: rotate(45deg);
+}
+
+.active .bar::before,
+.active .bar::after{
+    top: 0;
+}
+
+
+/* Navbar-Media-Query-For-Mobile */ 
+
+
+@media(max-width: 800px){
+    header, nav{
+      background:hsla(17, 100%, 0%, 0.52)
+    }
+
+    header nav{
+        top: 60px;
+        min-height: 100vh;
+        left: -100%;
+        transition: .5s ease-in-out;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    .nav-active{
+        left: 0;
+    }
+    .menu{
+        display: block;
+    }
+
+}
+
+
+/* Page-Heading-Styles */
+
+
+
+
+.page-heading{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('/PortfolioAssets/road_marking_bridge_123398_1920x1080.jpg')fixed no-repeat center center/cover;
+    position: relative;
+}
+
+/*.page-heading-skewed{
+    position: absolute;
+    border-width:  0 0 300px 100vw;
+    border-style: solid;
+    border-color: transparent transparent transparent hsla(218, 8%, 20%, 1);
+    bottom: 0;
+    z-index: 99;
+}
+
+*/
+
+.page-heading h1{
+    font-size: 3rem;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+.page-heading h2{
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+
+.smart-typing{
+    color: hsla(189, 100%, 52%, 1);
+}
+
+hr{
+    background: white;
+    height: 1px;
+    width: 80%;
+    margin: 1rem auto;
+}
+
+
+/* Page-Heading-Media-For-768px+ */
+
+
+@media(min-width: 768px){
+    .page-heading h1{
+        font-size: 5rem;
+    }
+    .page-heading h2{
+        font-size: 3.5rem;
+    }
+}
+
+/* Professions-Row */
+
+
+.profession{
+    height: 70px;
+    width: 100%;
+}
+
+.transparent-line{  /* Transparent-Decoration-Line */
+    height: 10px;
+    width: 100%;
+    opacity: 1;
+    background: url('/PortfolioAssets/road_marking_bridge_123398_1920x1080.jpg')fixed center center/cover;
+}
+
+.profession h4{
+    font-size: 2.5rem;
+    font-family: 'Gentium Book Basic', serif;
+    color: #8c8c8c;
+}
+
+
+.icons{
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.icons h1{
+    font-size: 1.5rem;
+    color: #8c8c8c;
+    font-family: 'Gentium Book Basic', serif;
+}
+
+.icon{
+    height: 100px;
+    width: 100px;
+    margin: 3rem auto;
+}
+
+.icon:hover{
+    transform: scale(1.2);
+    transition: 1s ease;
+}
+
+/* About-Me-Row-Styles */
+
+
+.about-me{
+    background: url('/PortfolioAssets/profileBlur.jpg')fixed center center/cover;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 100%;
+    margin: 0;
+    padding: 2 rem;;
+}
+
+.about-me-second{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-me-second p{
+    max-width: 500px;
+}
+
+.about-me-img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 2rem 0;
+}
+.about-me-img:hover{
+    transform: scale(1.2);
+    transition: .7s ease-in-out;
+}
+
+.about-me .contact-me-btn{
+    margin-top: 1rem;
+    text-shadow: 1px 1px 1px grey;
+}
+
+.about-me .contact-me-btn:hover{
+    text-decoration: none;
+}
+
+
+
+/* For-The-Test */
+
+
+footer{
+    height: 100vh;
+    background: red;
+}
+
+/* Maybe-Later */
+
+.signo-row{
+    width: 100%;
+    background: hsla(189, 100%, 52%);
+    background: url('/PortfolioAssets/the-blurred-819385_1920.jpg') center center/cover;
+    margin: 0;
+    opacity: .6;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+

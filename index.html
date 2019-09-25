@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!-- Boostrap CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font-Awesome-CDN -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="aos.css">
+	<script src="aos.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script> <!-- Jquery CDN -->
+	<title>Szaniszló Árpád</title>
+</head>
+<body>
+<header id="navbar" data-aos="fade-top">
+  <nav id="toggle">
+    <ul>
+			<li><a href="#greetings" class="nav-btn">Bemutatkozás</a></li>
+      <li><a href="#studies" class="nav-btn">Tanulmányok</a></li>
+      <li><a href="#skills" class="nav-btn" >Képességek</a></li>
+      <li><a href="#introductions" class="nav-btn" id="experience">Tapasztalatok</a></li>
+			<li><a href="#greetings" class="nav-btn contact-me">Contact me</a></li>
+    </ul>
+	</nav>
+	<div class="menu">
+			<span class="bar"></span>
+	</div>
+</header>
+<main>
+	<div class=" page-heading greetings">
+		<div class="page-heading-wrapper" data-aos="zoom-in">
+			<h1 class="type">Arpad Szaniszlo</h1>
+			<hr>
+			<h2>Junior Front-End Web | <strong class="smart-typing"></strong></h2>
+			<a href="#footer" class="watch-more-btn"></a>
+		</div>
+	</div>
+	<div class="container-fluid professions-and-icons">
+		<div class="row">
+			<div class="col-xs-12 profession">
+				<div class="profession-wrapper  flex-center-column">
+					<h4>Profession</h4>
+				</div>
+			</div>
+		</div>
+		<div class="transparent-line"></div>
+		<div class="row icons-row">
+			<div class="col-sm-3 icons flex-center-column" data-aos="zoom-in">
+				<img src="/PortfolioAssets/Icons/laptop.png" class="icon" alt="">
+				<h1>Web Development</h1>
+			</div>
+			<div class="col-sm-3 icons flex-center-column" data-aos="zoom-in">
+				<img src="/PortfolioAssets/Icons/tools.png" class="icon" alt="">
+				<h1>WebDesign</h1>
+			</div>
+			<div class="col-sm-3 icons flex-center-column" data-aos="zoom-in">
+				<img src="/PortfolioAssets/Icons/responsive (1).png" class="icon" alt="">
+				<h1>Responsive Webdesign</h1>
+			</div>
+			<div class="col-sm-3 icons flex-center-column">
+				<div class="icon-wrapper" data-aos="zoom-in">
+					<img src="/PortfolioAssets/Icons/reading.png" class="icon" alt="">
+				  <h1>More Studies</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row about-me">
+		<div class="col-sm-6 flex-center-column about-me-first">
+			<h1>About Me!</h1>
+			<img src="/PortfolioAssets/profile.jpg" class="about-me-img" alt="">
+		</div>
+		<div class="col-sm-6 about-me-second">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				Curabitur id tincidunt arcu, nec pharetra metus. 
+				Integer id lobortis magna. Praesent porttitor varius risus. Nullam arcu enim, 
+				condimentum ac porta sit amet,tristique a tortor. 
+				Phasellus blandit tortor massa, quis ultricies risus ultricies eget. 
+				Donec egestas velit sit amet velit pharetra, 
+				eget vestibulum ipsum fringilla. Praesent a turpis nunc.</p>
+			<a href="#" class="btn-warning btn-lg contact-me-btn">Contact Me <i class="fa fa fa-angle-down"></i></a>
+		</div>
+	</div>
+	<div class="row signo-row flex-center-column">
+		<div class="col-xs-12 signo-png">
+			<img src="/PortfolioAssets/signature5d8b2c527c18c.gif" alt="">
+		</div>
+	</div>
+
+</main>
+<footer></footer>
+<!--<div class="signature-row">
+		<div class="signature-wrapper flex-center-column">
+			<div class="signature">
+				<img src="/PortfolioAssets/signature5d8b2c527c18c.gif" alt="">
+			</div>
+		</div>
+	</div> -->
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+<script src="script.js"></script>
+
+
+<script src="/typed.js"></script>
+
+
+
+
+<script type="text/javascript">
+
+//Smart Typing Plugin Controll Javascript
+	var typed = new Typed('.smart-typing', {
+  strings: ['Developer','Designer','Creator'],
+		smartBackspace: true,
+	  typeSpeed: 100,
+	  backSpeed: 100,
+	  loop: true
+});
+
+// Menu Bar and Nav Toggle Function
+	$("document").ready(function () {
+		$(".menu").click(function () {
+			$(".menu").toggleClass("active");
+			$("nav").toggleClass("nav-active");
+		});
+	});
+
+// Navigation Scroll Dark Animation
+	$(window).on('scroll', function() {
+	if($(window).scrollTop()) {
+		$('nav').addClass('dark-on-scroll');
+	} else {
+		$('nav').removeClass('dark-on-scroll');
+	}
+})
+
+// Animate On Scroll Plugin
+	AOS.init({
+		duration: 2500,
+	});
+
+</script>
+</body>
+</html>
